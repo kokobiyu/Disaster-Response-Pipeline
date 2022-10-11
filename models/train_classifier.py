@@ -46,9 +46,14 @@ def load_data(database_filepath):
         category_names -> used for data visualization (app)
     """
     engine = create_engine('sqlite:///' + database_filepath)
-    table_name = os.path.basename(database_filepath).replace(".db","") + "_table"
-    df = pd.read_sql_table(table_name,engine)
+    df = pd.read_sql_table('df',engine)
     df.columns = df.columns.str.replace(r"'|,|[(|)]", "")
+    
+    #remove empty column
+    df.drop(['child_alone'], axis=1, inplace = True) 
+    
+    #this could be an error so i replace it with '1' assuming it is valid response
+    df['related'] = df['related'].map(lambda x: 1 if x==2 else x)  
     
     X = df['message']
     Y = df.iloc[:,4:]
@@ -124,7 +129,7 @@ def build_model():
     'clf__estimator__learning_rate': [0.5, 1.0],
     'clf__estimator__n_estimators': [10, 20]
     }
-    cv = GridSearchCV(pipeline2, param_grid=parameters, scoring='f1_micro', n_jobs=-1, verbose=3)
+    cv = GridSearchCV(model, param_grid=parameters, scoring='f1_micro', n_jobs=-1, verbose=3)
     
     return cv
 
