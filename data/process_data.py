@@ -50,8 +50,8 @@ def save_data(df, database_filename):
         df -> Clean data Pandas DataFrame
         database_filename -> database file (.db) destination path
     """
-    engine = create_engine('sqlite:///DisasterResponse.db')
-    df.to_sql('DisasterResponse', engine, index=False)
+    engine = create_engine('sqlite:///' + database_filename)
+    df.to_sql('df', engine, index=False)
     pass   
 
 
