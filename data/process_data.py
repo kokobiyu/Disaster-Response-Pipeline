@@ -37,6 +37,7 @@ def clean_data(df):
         categories[column] = categories[column].astype(np.int)
     df = df.drop('categories',axis=1)
     df = pd.concat([df,categories],axis=1)
+    df['related'] = df['related'].map(lambda x: 1 if x==2 else x)  
     #df = pd.concat([df,pd.get_dummies(df.genre)],axis=1)
     #df = df.drop(['genre','social'],axis=1) 
     df = df.drop_duplicates()
