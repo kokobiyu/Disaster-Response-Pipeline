@@ -119,7 +119,14 @@ def build_model():
         ])),
         ('clf', MultiOutputClassifier(AdaBoostClassifier()))
     ])
-    return model
+    
+    parameters = {
+    'clf__estimator__learning_rate': [0.5, 1.0],
+    'clf__estimator__n_estimators': [10, 20]
+    }
+    cv = GridSearchCV(pipeline2, param_grid=parameters, scoring='f1_micro', n_jobs=-1, verbose=3)
+    
+    return cv
 
 def multioutput_fscore(y_true,y_pred,beta=1):
     """
