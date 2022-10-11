@@ -17,8 +17,9 @@
 ## Description
 
 This Project is part of Data Science Nanodegree Program by Udacity in collaboration with Figure Eight.
-The initial dataset contains pre-labelled tweet and messages from real-life disaster. 
+The initial dataset contains pre-labelled tweet and messages from real-life disaster. There are 36 pre-defined categories, and examples of these categories include Aid Related, Medical Help, Search And Rescue, etc. By classifying these messages, we can allow these messages to be sent to the appropriate disaster relief agency. This project will involve the building of a basic ETL and Machine Learning pipeline to facilitate the task. 
 The aim of the project is to build a Natural Language Processing tool that categorize messages.
+
 
 The Project is divided in the following Sections:
 
@@ -36,13 +37,16 @@ The Project is divided in the following Sections:
           |-- data                
                 |-- DisasterResponse.db # database to save clean data to
                 |-- categories.csv # data to process 
-                |-- message.csv # data to process
+                |-- disaster_message.csv # data to process
                 |-- process_data.py
           |-- models
                 |-- classifier.rar (classifier.pkl) # saved model 
                 |-- train_classifier.py
-          |-- image     
+          |-- image
+	  	|-- intro.png
+		|-- main_page.png
           |-- README
+	  |-- License
 
 <a name="getting_started"></a>
 ## Getting Started
@@ -66,7 +70,7 @@ git clone https://github.com/kokobiyu/Disaster-Response-Pipeline.git
 1. Run the following commands in the project's root directory to set up your database and model.
 
     - To run ETL pipeline that cleans data and stores in database
-        `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
+        `python data/process_data.py data/disaster_messages.csv data/categories.csv data/DisasterResponse.db`
     - To run ML pipeline that trains classifier and saves
         `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
 
