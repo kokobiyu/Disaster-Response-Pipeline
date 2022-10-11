@@ -26,6 +26,24 @@ The Project is divided in the following Sections:
 2. Machine Learning Pipeline to train a model able to classify text message in categories
 3. Web App to show model results in real time. 
 
+##Files
+
+          |-- app
+                |-- templates
+                        |-- go.html # main page of web app
+                        |-- master.html # classification result page of web app
+                |-- run.py # Flask file that runs app
+          |-- data                
+                |-- DisasterResponse.db # database to save clean data to
+                |-- categories.csv # data to process 
+                |-- message.csv # data to process
+                |-- process_data.py
+          |-- models
+                |-- classifier.rar (classifier.pkl) # saved model 
+                |-- train_classifier.py
+          |-- image     
+          |-- README
+
 <a name="getting_started"></a>
 ## Getting Started
 
