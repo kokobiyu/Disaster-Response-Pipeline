@@ -18,7 +18,7 @@
 
 This Project is part of Data Science Nanodegree Program by Udacity in collaboration with Figure Eight.
 The initial dataset contains pre-labelled tweet and messages from real-life disaster. There are 36 pre-defined categories, and examples of these categories include Aid Related, Medical Help, Search And Rescue, etc. By classifying these messages, we can allow these messages to be sent to the appropriate disaster relief agency. This project will involve the building of a basic ETL and Machine Learning pipeline to facilitate the task. 
-The aim of the project is to build a Natural Language Processing tool that categorize messages.
+The aim of the project is to build a Natural Language Processing model to categorize messages in real-time basis.
 
 
 The Project is divided in the following Sections:
@@ -100,3 +100,7 @@ git clone https://github.com/kokobiyu/Disaster-Response-Pipeline.git
 The main page shows some graphs about training dataset, provided by Figure Eight
 
 ![Main Page](main_page.png)
+
+Enter the message and then click on 'Classify Message' button. This is the example of the result
+
+![Example](example.png)
