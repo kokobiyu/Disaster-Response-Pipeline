@@ -29,26 +29,26 @@ The Project is divided in the following Sections:
 
 ## Files
 
-          |-- app
-                |-- templates
-                        |-- go.html # main page of web app
-                        |-- master.html # classification result page of web app
-                |-- run.py # Flask file that runs app
-          |-- data                
-                |-- DisasterResponse.db # database to save clean data to
-                |-- categories.csv # data to process 
-                |-- disaster_message.csv # data to process
-                |-- process_data.py
-          |-- models
-                |-- classifier.rar (classifier.pkl) # saved model 
-                |-- train_classifier.py
-          |-- image
-	  	|-- intro.png
+      	|-- app
+            	|-- templates
+                   	|-- go.html # main page of web app
+                      	|-- master.html # classification result page of web app
+             	|-- run.py # Flask file that runs app
+       	|-- data                
+             	|-- DisasterResponse.db # database to save clean data to
+             	|-- categories.csv # data to process 
+             	|-- disaster_message.csv # data to process
+             	|-- process_data.py
+       	|-- models
+            	|-- classifier.rar (classifier.pkl) # saved model 
+             	|-- train_classifier.py
+	|-- image
+	 	|-- intro.png
 		|-- main_page.png
-	|-- ML Pipeline Preparation 
-	|-- ML Pipeline Preparation
-          |-- README
-	  |-- License
+	|-- ML Pipeline Preparation # notebok workspace
+	|-- ETL Pipeline Preparation # notebook workspace
+	|-- README
+	|-- License
 
 <a name="getting_started"></a>
 ## Getting Started
