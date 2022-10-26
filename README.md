@@ -45,6 +45,8 @@ The Project is divided in the following Sections:
           |-- image
 	  	|-- intro.png
 		|-- main_page.png
+	|-- ML Pipeline Preparation 
+	|-- ML Pipeline Preparation
           |-- README
 	  |-- License
 
