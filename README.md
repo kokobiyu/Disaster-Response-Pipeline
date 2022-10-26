@@ -29,17 +29,17 @@ The Project is divided in the following Sections:
 
 ## Files
 
-      	|-- app
-            	|-- templates
+	|-- app
+		|-- templates
                    	|-- go.html # main page of web app
                       	|-- master.html # classification result page of web app
              	|-- run.py # Flask file that runs app
-       	|-- data                
+	|-- data                
              	|-- DisasterResponse.db # database to save clean data to
              	|-- categories.csv # data to process 
              	|-- disaster_message.csv # data to process
              	|-- process_data.py
-       	|-- models
+	|-- models
             	|-- classifier.rar (classifier.pkl) # saved model 
              	|-- train_classifier.py
 	|-- image
